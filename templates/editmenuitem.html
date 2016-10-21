@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Edit Menu Item{% endblock %}
+{% block body %}
+
+    <div class="container">
+
+        <div class='flash'>
+        {% with messages = get_flashed_messages() %}
+                {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li> <strong> {{ message }} </strong> </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% endwith %}
+        </div>
+
+        <div class="title">
+            <h1>Edit Menu Item</h1>
+            <h1>{{restaurant.name}}</h1>
+        </div>
+
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form  action="#" method="post">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input name="name" type="text" class="form-control" value="{{item.name}}">
+                    <label>Description:</label>
+                    <textarea name="description" class="form-control">{{ item.description }}</textarea>
+                    <label>Price:</label>
+                    <input name="price" type="text" class="form-control" value="{{item.price}}">
+                    <label>Course:</label>
+                    <select name="course" multiple class="form-control">
+                        <option {% if item.course == 'Appetizer'%}selected{%endif%}>Appetizer</option>
+                        <option {% if item.course == 'Entree'%}selected{%endif%}>Entree</option>
+                        <option {% if item.course == 'Dessert'%}selected{%endif%}>Dessert</option>
+                        <option {% if item.course == 'Beverage'%}selected{%endif%}>Beverage</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Edit</button>
+            </form>
+            <a href="{{ url_for('showMenu',restaurant_id = restaurant.id)}}">
+                <button name="cancel" class="btn btn-danger btn-block">Cancel</button>
+            </a>
+        </div>
+        <div class="col-md-4"></div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,94 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header.container {
+    height: 51px;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    margin: 10px;
+}
+
+.title h2 {
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #1BA173;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+    color: #4A4A4A;
+    line-height: 23px;
+}
+
+ p {
+    font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #7B7573;
+    line-height: 24px;
+    font-weight: 400;
+ }
+
+ strong {
+    font-size: 16px;
+    color: #7B7573;
+    line-height: 24px;
+ }
+
+ a {
+    font-size: 14px;
+    color: #0093B9;
+    line-height: 17px;
+ }
+
+.btn {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-width: 2px;
+}
+
+ .restaurant-list {
+    background-color: #F0F0F0;
+    padding: 20px;
+}
+ .restaurant-list:hover {
+    background-color: #e1e17f;
+    padding: 20px;
+}
+
+.menu-item {
+    text-align: center;
+    background: #F0F0F0;
+    padding: 20px;
+    margin: 20px;
+}
+
+.menu-price {
+    font-weight: 700;
+}
+
+.flash {
+    background-color: #98FB98;
+    width:100%;
+}
+
+.flash li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    background-image: url(../image/food.jpg);
+    background-size: cover;
+    margin-bottom: 20px;
+    min-height: 129px;
+}

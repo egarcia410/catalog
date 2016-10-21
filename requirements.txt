@@ -1,0 +1,9 @@
+Flask
+bleach
+httplib2
+requests
+oauth2client
+httplib2
+passlib
+sqlalchemy
+python-psycopg2

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Edit Restaurant{% endblock %}
+{% block body %}
+
+    <div class="container">
+
+        <div class="title">
+            <h1>Edit Restaurant</h1>
+            <h1>{{restaurant.name}}</h1>
+        </div>
+
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form  action="{{ url_for('editRestaurant',restaurant_id = restaurant.id)}}" method="post">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input name="name" type="text" class="form-control" value="{{restaurant.name}}">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Create</button>
+            </form>
+            <a href="{{url_for('showMenu', restaurant_id=restaurant.id)}}">
+                <button class="btn btn-danger btn-block">Cancel</button>
+            </a>
+        </div>
+        <div class="col-md-4"></div>
+
+    </div>
+
+{% endblock %}
